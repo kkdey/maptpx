@@ -337,13 +337,14 @@ tpxfit <- function(X, theta, alpha, tol, verb,
       QNup$L <-  tpxlpost(X=X, theta=move$theta, omega=move$omega, alpha=alpha, admix=admix, grp=grp) }
 
     ## calculate dif
-    dif <- (QNup$L-L)/(L+0.001)
+    dif <- (QNup$L-L)
+    dif2 <- abs(dif)/(L+0.001)
 
     L <- QNup$L
 
 
     ## check convergence
-    if(abs(dif) < tol){
+    if(abs(dif2) < tol){
       if(sum(abs(theta-move$theta)) < tol){ update = FALSE } }
 
     ## print
