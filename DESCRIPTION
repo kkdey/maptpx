@@ -1,7 +1,7 @@
 Package: maptpx
 Title:  MAP Estimation of Topic Models
-Version: 1.9-5
-Author: Matt Taddy <taddy@chicagobooth.edu>
+Version: 1.9-6
+Author: Matt Taddy <taddy@chicagobooth.edu>, Kushal K Dey <kshldey@gmail.com>
 Depends: R (>= 2.10)
 Imports: slam, SQUAREM, boot
 Suggests: MASS
