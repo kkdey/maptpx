@@ -337,7 +337,7 @@ tpxfit <- function(X, theta, alpha, tol, verb,
       QNup$L <-  tpxlpost(X=X, theta=move$theta, omega=move$omega, alpha=alpha, admix=admix, grp=grp) }
 
     ## calculate dif
-    dif <- (QNup$L-L)
+    dif <- (QNup$L-L)/(L+0.001)
 
     L <- QNup$L
 
